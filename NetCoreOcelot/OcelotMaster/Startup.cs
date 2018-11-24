@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
+using Ocelot.Provider.Consul;
 
 namespace OcelotMaster
 {
@@ -27,7 +28,8 @@ namespace OcelotMaster
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddOcelot(new ConfigurationBuilder().AddJsonFile("OcelotConfig.Json").Build());
+            //services.AddOcelot(new ConfigurationBuilder().AddJsonFile("OcelotConfig.Json").Build());
+            services.AddOcelot();//.AddConsul();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 

@@ -11,6 +11,19 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="ocelot" Version="12.0.1" />
+    <PackageReference Include="Ocelot.Provider.Consul" Version="0.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="ocelot.all.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="ocelot.one.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="ocelot.two.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,10 @@
+{"Aggregates": [
+    {
+      "ReRouteKeys": [
+        "OneOcelot",
+        "TwoOcelot"
+      ],
+      "UpstreamPathTemplate": "/GetOrderDetail/{id}"
+    }
+  ]
+}

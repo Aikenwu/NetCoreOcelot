@@ -1,0 +1,26 @@
+{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/api/product/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 82
+        }
+      ],
+      "UpstreamPathTemplate": "/product/{id}",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+	  //"ServiceName": "product",
+	  "RateLimitOptions": {  
+        "ClientWhitelist": [],  
+        "EnableRateLimiting": true,  
+        "Period": "1s",  
+        "PeriodTimespan": 1,  
+        "Limit": 1  
+    },
+      "Key": "OneOcelot",
+      "Priority": 2
+    }
+  ]
+}
