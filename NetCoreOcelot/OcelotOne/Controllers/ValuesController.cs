@@ -21,7 +21,7 @@ namespace OcelotOne.Controllers
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {
-            return "value";
+            return "value from one "+id;
         }
 
         // POST api/values

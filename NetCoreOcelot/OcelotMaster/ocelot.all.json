@@ -6,5 +6,30 @@
       ],
       "UpstreamPathTemplate": "/GetOrderDetail/{id}"
     }
+  ],
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/api/values/{everything}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 82
+        },
+        {
+          "Host": "localhost",
+          "Port": 83
+        }
+      ],
+      "UpstreamPathTemplate": "/values/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "OcelotKey",
+        "AllowedScopes": []
+      }
+    }
   ]
 }
